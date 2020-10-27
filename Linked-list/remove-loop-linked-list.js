@@ -28,14 +28,26 @@ const removeLoop = () => {
 	a.tail.next = a.head.next;
 	let SP = a.head;
 	let FP = a.head;
+	// check for SP & FP value to be equal
 	while (SP && SP.next) {
 		SP = SP.next;
 		FP = FP.next.next;
 		if (SP.value === FP.value) {
-			// return false;
-			FP.next = null;
+			SP = a.head;
+		}
+	}
+	// *** impotent replace SP with head and increase 1 step by step
+	while (SP.next === FP.next) {
+		FP.next = null;
+	}
+	// check for loop again after removing loop
+	while (SP && SP.next) {
+		SP = SP.next;
+		FP = FP.next.next;
+		if (SP.value === FP.value) {
+			console.log("loop again");
+			return false;
 		}
 	}
 };
 removeLoop();
-console.log(a);
