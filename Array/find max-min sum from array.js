@@ -1,4 +1,4 @@
-// find Largest sum contiguous Subarray
+// find 2 sum max-min from array
 let a = [12, 34, 56, 22, 45, 11, 67, 35, -98];
 
 class LargerSumArray {
