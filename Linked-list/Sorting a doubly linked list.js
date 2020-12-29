@@ -55,6 +55,12 @@ function sortedInsert(sorted, newNode) {
 	}
 	//Swap the elements
 	newNode.next = current.next;
+	if (!!current.next) {
+		current.next.prev = newNode;
+		newNode.prev = current;
+	} else {
+		newNode.prev = null;
+	}
 	current.next = newNode;
 	//Return the sorted list.
 	return temp.next;
