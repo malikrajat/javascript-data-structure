@@ -20,6 +20,10 @@ Stack.prototype.peek = function () {
 Stack.prototype.size = function () {
 	return this.counter;
 };
+Stack.prototype.getByIndex = function (index) {
+	if (this.counter < index) return -1;
+	return this.a[index];
+};
 module.exports = {
 	Stack,
 };
