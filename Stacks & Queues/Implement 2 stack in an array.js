@@ -22,6 +22,7 @@ Stack.prototype.push2 = function (ele) {
 Stack.prototype.pop1 = function (ele) {
 	if (this.top1 >= 0) {
 		let elem = this.a[this.top1];
+		this.a.splice(this.top1, 1);
 		this.top1--;
 		return elem;
 	} else {
@@ -31,6 +32,7 @@ Stack.prototype.pop1 = function (ele) {
 Stack.prototype.pop2 = function (ele) {
 	if (this.top2 < this.counter) {
 		let elm = this.a[this.top2];
+		this.a.splice(this.top2, 1);
 		this.top2++;
 		return elm;
 	} else {
@@ -38,7 +40,7 @@ Stack.prototype.pop2 = function (ele) {
 	}
 };
 
-let stack = new Stack();
+let stack = new Stack(10);
 stack.push1(11);
 stack.push2(12);
 stack.push1(15);
@@ -46,3 +48,4 @@ stack.push2(19);
 stack.push1(89);
 stack.pop2();
 stack.pop1();
+console.log(stack.a);
