@@ -24,7 +24,17 @@ Stack.prototype.getByIndex = function (index) {
 	if (this.counter < index) return -1;
 	return this.a[index];
 };
-module.exports = {
-	Stack,
+Stack.prototype.getMin = function () {
+	if (this.size() <= 0) return false;
+	let min = this.a[0];
+	for (let index = 0; index < this.a.length; index++) {
+		if (min > this.a[index]) {
+			min = this.a[index];
+		}
+	}
+	return min;
 };
-// module.exports = Stack;
+// module.exports = {
+// 	Stack,
+// };
+module.exports = Stack;
