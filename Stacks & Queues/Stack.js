@@ -9,9 +9,9 @@ Stack.prototype.push = function (ele) {
 };
 Stack.prototype.pop = function (ele) {
 	if (this.counter === 0) return -1;
-	this.a.splice(this.counter - 1, 1);
+	let res = this.a.splice(this.counter - 1, 1);
 	this.counter -= 1;
-	return this.a;
+	return res;
 };
 Stack.prototype.peek = function () {
 	if (this.counter === 0) return -1;
