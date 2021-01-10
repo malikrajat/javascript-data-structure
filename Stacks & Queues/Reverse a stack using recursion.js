@@ -6,8 +6,6 @@
 // stack.push("l");
 // stack.push("e");
 
-// // ReverseStack.prototype = stack.prototype;
-// // ReverseStack.contractor = ReverseStack;
 // function ReverseStack(stack) {
 // 	// stackIns(this);
 
