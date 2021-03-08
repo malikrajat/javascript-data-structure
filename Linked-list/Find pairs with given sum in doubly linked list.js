@@ -41,7 +41,11 @@ function sortLinkedList(head) {
 		current = next;
 	}
 	//Return the sorted list
-	return result;
+	// return result;
+	findSum(result);
+}
+function findSum(list) {
+	console.log(list);
 }
 //Function to sort the list
 function sortedInsert(sorted, newNode) {
